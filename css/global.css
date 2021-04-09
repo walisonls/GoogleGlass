@@ -1,0 +1,71 @@
+@charset "UTF-8";
+body, head{
+    padding: 0;
+    margin: 0;
+    background: url("/img/background-pagina.jpeg");
+}
+div.pag{
+    width: 1000px;
+    margin: 0 auto;
+    border: black solid 1px;
+    box-shadow: 5px 5px 5px rgba(200, 20, 200, .4);
+    background-color: yellow;
+    font-family: 'sans';
+    word-wrap: break-word;
+}
+ /*--------detalhes do codigo------*/
+h3{
+    background-color: black;
+    color: white;
+    padding: 4px;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+/*------corpo da pagina------*/
+header.cabecalho{
+    padding: 10px;
+    border-bottom: black solid 1px;
+    background: url(../img/glass-logo-peq.jpg) no-repeat 10px 100px;
+    background-color: white;
+    position: relative;
+}
+section.esquerda{
+    display: block;
+    float: left;
+    width: 520px;
+    padding: 10px;
+    border-right: black solid 1px;
+}
+aside.direita{
+    display: block;
+    float: right;
+    width: 435px;
+    padding: 10px;
+}
+footer.creditos{
+    clear: both;
+    text-align: center;
+    padding: 5px;
+    border-top: black solid 1px;
+}
+/*----menu-----*/
+nav.menu ul{
+    display: flex;
+    position: relative;
+    top: -120px;
+    right: -300px;
+}
+nav.menu ul li a{
+    color: white;
+    padding: 10px;
+    margin: 0px 10px 0px 10px;
+    display: block;
+    background-color: black;
+}
+nav.menu ul li a:hover{
+    color: chartreuse;
+}

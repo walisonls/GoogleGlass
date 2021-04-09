@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Glass - Fale conosco</title>
+    <link rel="icon" href="/js/icone-contato.png">
+    <script src="js/formulario.js"></script>
+    <script src="/js/funcoes.js"></script>
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/form.css">
+</head>
+<body>
+
+    <div class="pag">
+
+            <header class="cabecalho">
+                <hgroup>
+                    <p><h2>Google Glass</h2></p>
+                    <p>A revolução do Google está chegando</p>
+                </hgroup>
+
+                <img id="icone" src="/img/contato.png" style="position: absolute; left: 700px; top: 50px;">
+            
+                <h4 hidden>Menu Principal</h4>
+                <nav class="menu">
+                    <ul>
+                        <li><a onmousemove="icones('/img/home.png')" onmouseout="icones('/img/contato.png')" href="index.html">Home</a></li>
+                        <li><a onmousemove="icones('img/especificacoes.png')" onmouseout="icones('/img/contato.png')" href="specs.html">Especificações</a></li>
+                        <li><a onmousemove="icones('img/fotos.png')" onmouseout="icones('img/contato.png')" href="fotos.html">Fotos</a></li>
+                        <li><a onmousemove="icones('img/multimidia.png')" onmouseout="icones('/img/contato.png')" href="multimidia.html">Multimídia</a></li>
+                        <li><a onmousemove="icones('img/contato.png')" onmouseout="icones('/img/contato.png')" href="fale-conosco.html">Fale conosco</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <h1>Formulrio de contato</h1>
+
+            <h4>Fale Conosco > Contato<b4>
+            por Walison Lima<br>
+            Atualizado em 18/Set/2020</h2>
+            <!-- oninput >> quando digitar qualquer coisa entro dispara uma ação -->
+            <form method="post" id="fcontato" action="mailto:contato@gmail.com">
+            <!-- precisa de um servidor do lado do cliente para receber os dados do formulario -->
+
+                <fieldset id="usuario"><legend>Identificação do Usuário</legend>
+                    <p><label for="Cnome">Nome: </label><input type="text" name="Jnome" id="Cnome" maxlength="50" placeholder="Nome Completo"></p>
+                    <p><label for="Csenha">Senha: </label><input type="password" name="Jsenha" id="Csenha" maxlength="30" size="8" placeholder="8 digitos..."></p>
+                    <p><label for="Cemail">E-mail: </label><input type="email" name="Jemail" id="Cemail"></p>
+<!------------------------------------------------------------------------------------------------------>
+                    <fieldset id="sexo"><legend>Sexo</legend>
+                        <p><input type="radio" name="Rgen" id="Csex"><label for="Cfem"> Masculino</label></p>
+                        <p><input type="radio" name="Rgen" id="Csex"><label for="Cmas"> Feminino</label></p>
+                    </fieldset>
+<!------------------------------------------------------------------------------------------------------>
+                    <p><label for="Cnasc">Data de Nascimento: </label><input type="date" name="Jnasc" id="Cnasc"></p>
+                </fieldset>
+
+                <fieldset id="endereco"><legend>Endereço do Usuário</legend>
+                    <p><label for="Crua">Logradouro: </label><input type="text" name="Jrua" id="Crua" maxlength="30" size="10" placeholder="Bairro,Av,Rua"></p>
+                    <p><label for="Cend">Número: </label><input type="number" name="Jend" id="Cend" min="1" max="99999"></p>
+                    <p><label for="Cestado">Estado: </label><select name="Jestado" id="Cestado">
+                        <optgroup label="Região Suldeste">
+                            <option value="Ce">Rio de Janeiro</option>
+                            <option value="Mr">São paulo</option>
+                            <option value="Sp">Minas Gerais</option>
+                        </optgroup>
+                        <optgroup label="Região Sul">
+                            <option value="Mg">Paraná</option>
+                            <option value="Pr">Santa Catarina</option>
+                            <option value="Sc">Rio Grande do Sul</option>
+                        </optgroup>
+                    </select>
+                    </p>
+
+                    <p><label for="Ccidade">Cidade: </label><input type="text" name="Jcidade" id="Ccidade" placeholder="Fortaleza..." size="15" list="cidades"></p>
+                    <datalist id="cidades">
+                        <option value="">Rio de Janeiro</option>
+                        <option value="">Nova Iguaçu</option>
+                        <option value="">Niterói</option>
+                        <option value="">Belford Roxo</option>
+                    </datalist>
+
+                </fieldset>
+
+                <fieldset id="mensagem"><legend>Mensagem do Usuário</legend>
+                    <p><label for="Curg">Grau de Urgência: </label>Mín<input type="range" name="Jurg" id="Curg" min="0" max="10" stap="2">Máx</p>
+                    <p><label for="Csms">Mensagem</label>:<br><textarea name="Jsms" id="Csms" cols="40" rows="5" maxlength="1000px" style="outline: 0;"></textarea></p>
+                </fieldset>
+                
+                <fieldset id="pedido" oninput="total()"><legend>Quero um Google Glass</legend>
+                    <p><input type="checkbox" name="Jcheck" id="Ccheck"><label for="Ccheck"> Gostaria de adquirir um Google Glass quando disponível</label></p>
+                    <p><label for="Ccor">Cor: </label><input type="color" value="#a11111" name="Jcor" id="Ccor"></p>
+
+                    <p><label for="Cquan">Quantidade: </label><input type="number" name="Jquan" id="Cquan" min="1" max="99"></p>
+                    <p><label for="valor">Preço Total: <input type="text" name="Jvalor" id="Cvalor" placeholder="Valor total a pagar" readonly></p>
+                </fieldset>
+
+                <input type="button" value="Enviar" style="border-radius: 10px; font-size: 20px; color: white; background-color: black; border: solid 3px #cecece; font-family: 'Sans-serif';" name="btnenviar" onclick="enviar()">
+            </form>
+
+            <footer class="creditos">
+                <p>Copyright &copy 2013 - by Walison Lima</p>
+                <p><a href="https://www.facebook.com/walison.lima.3511">Facebook</a> | <a href="https://www.instagram.com/gr_walison/">Instagram</a></p>
+            </footer>
+    </div>
+</body>
+</html>

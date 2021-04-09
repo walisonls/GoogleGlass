@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Glass - especificações</title>
+    <link rel="icon" href="/img/icone-contato.png">
+    <script src="/js/funcoes.js"></script>
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/midia.css">
+</head>
+<body>
+
+    <div class="pag">
+
+            <header class="cabecalho">
+                <hgroup>
+                    <p><h2>Google Glass</h2></p>
+                    <p>A revolução do Google está chegando</p>
+                </hgroup>
+
+                <img id="icone" src="/img/multimidia.png" style="position: absolute; left: 700px; top: 50px;">
+            
+                <h4 hidden>Menu Principal</h4>
+                <nav class="menu">
+                    <ul>
+                        <li><a onmousemove="icones('/img/home.png')" onmouseout="icones('/img/multimidia.png')" href="index.html">Home</a></li>
+                        <li><a onmousemove="icones('img/especificacoes.png')" onmouseout="icones('/img/multimidia.png')" href="specs.html">Especificações</a></li>
+                        <li><a onmousemove="icones('img/fotos.png')" onmouseout="icones('/img/multimidia.png')" href="fotos.html">Fotos</a></li>
+                        <li><a onmousemove="icones('img/multimidia.png')" onmouseout="icones('/img/multimidia.png')" href="multimidia.html">Multimídia</a></li>
+                        <li><a onmousemove="icones('img/contato.png')" onmouseout="icones('/img/multimidia.png')" href="fale-conosco.html">Fale conosco</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <section id="pagina">
+            
+                <p>Glass > Multimídia<br>
+                Sons e Vídeos<br>
+                por Walison Lima<br>
+                Atualizado em 19/Set/2020</p>
+
+
+                <div class="tv-radio">
+                    <audio id="musica" controls="controls">
+                            <source src="/media/ignite.mp3" type="audio/mpag">
+                            <source src="/media/ignite.m4a" type="audio/x-aac">
+                            <source src="/media/ignite.ogg" type="audio/ogg">
+                        <!--   mp3 - mpag / m4a - x-aac / ogg - ogg  -->
+                    </audio>
+                    <video id="filme" controls="controls" poster="/img/video-mini03.jpg">
+                            <source src="/media/google-glass-v1.mp4" type="video/mp4">
+                            <source src="/media/google-glass-v1.webm" type="video/webm">
+                            <source src="/media/google-glass-v1.ogv" type="video/ogv">
+                        <!--   mp4 - mp4 / webm - webm / ogv - ogv  -->
+                    </video>
+                    <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/4EvNxWhskf8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                    
+                </div>
+
+        </section>
+        <footer class="creditos">
+            <p>Copyright &copy 2013 - by Walison Lima</p>
+            <p><a href="https://www.facebook.com/walison.lima.3511">Facebook</a> | <a href="https://www.instagram.com/gr_walison/">Instagram</a></p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+@charset "UTF-8";
+section.esquerda-full{
+    padding: 10px;
+    background-color: white;
+}
+section.conteudo{
+    width: 1000px;
+    margin: auto;
+}
+iframe#frame-spacs{
+    border: none;
+    overflow: hidden;
+    height: 380px;
+    width: 450px;
+}
+iframe#frame-spacs::-webkit-scrollbar {
+    display: none;
+}
